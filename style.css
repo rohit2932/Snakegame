@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Carter+One");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.body {
+  background: url("bg.jpg");
+  min-height: 100vh;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.buttons {
+  display: none;
+}
+#scoreBox {
+  position: absolute;
+  top: 9px;
+  right: 301px;
+  font-size: 39px;
+  font-weight: bold;
+  font-family: "New Tegomin", serif;
+}
+
+#hiscoreBox {
+  position: absolute;
+  top: 71px;
+  right: 241px;
+  font-size: 39px;
+  font-weight: bold;
+  font-family: "New Tegomin", serif;
+}
+#project p {
+  position: absolute;
+  top: 143px;
+  right: 157px;
+  font-size: 39px;
+  font-weight: bold;
+  font-family: "New Tegomin", serif;
+}
+#project #p2 {
+  position: absolute;
+  top: 214px;
+  right: 79px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "New Tegomin", serif;
+}
+#project .p3 {
+  display: none;
+}
+#board {
+  background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+  width: 90vmin;
+  height: 92vmin;
+  border: 2px solid black;
+  display: grid;
+  grid-template-rows: repeat(18, 1fr);
+  grid-template-columns: repeat(18, 1fr);
+  margin-left: 223px;
+}
+
+.head {
+  background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+  border: 2px solid rgb(34, 4, 34);
+  transform: scale(1.02);
+  border-radius: 9px;
+}
+
+.snake {
+  background-color: purple;
+  border: 0.25vmin solid white;
+  border-radius: 12px;
+}
+
+.food {
+  background: linear-gradient(red, purple);
+  border: 0.25vmin solid black;
+  border-radius: 8px;
+}
+/* for phone */
+
+@media screen and (max-width: 767px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .body {
+    background: url("bg2.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: left;
+    align-items: center;
+  }
+
+  #scoreBox {
+    position: absolute;
+    top: 1vh;
+    left: 5vh;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "New Tegomin", serif;
+  }
+
+  #hiscoreBox {
+    position: absolute;
+    top: 1vh;
+    left: 34vh;
+    font-size: 18px;
+    color: aliceblue;
+    font-weight: bold;
+    font-family: "New Tegomin", serif;
+  }
+  #project p {
+    position: absolute;
+    top: 89vh;
+    left: 26px;
+    color: aliceblue;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "New Tegomin", serif;
+  }
+
+  #project #p2 {
+    position: absolute;
+    top: 93vh;
+    left: 27px;
+    font-size: 11px;
+    font-weight: bold;
+    color: aliceblue;
+    font-family: "New Tegomin", serif;
+    z-index: 1;
+  }
+  #board {
+    background: linear-gradient(rgb(170, 236, 170), rgb(236, 236, 167));
+    width: 90vmin;
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+    margin-left: 9px;
+    margin-bottom: 1px;
+    margin-top: 10vh;
+  }
+
+  .head {
+    background: linear-gradient(rgb(240, 124, 124), rgb(228, 228, 129));
+    border: 2px solid rgb(34, 4, 34);
+    transform: scale(1.02);
+    border-radius: 9px;
+  }
+
+  .snake {
+    background-color: purple;
+    border: 0.25vmin solid white;
+    border-radius: 12px;
+  }
+
+  .food {
+    background: linear-gradient(red, purple);
+    border: 0.25vmin solid black;
+    border-radius: 8px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    padding-top: 0;
+  }
+  .buttons .row {
+    padding-bottom: 0;
+  }
+  .btn-ud {
+    width: 70px;
+    height: 50px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    text-decoration: none !important;
+    outline: none !important;
+    font-family: "Carter One", sans-serif;
+    font-size: 10px;
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 1px #0066a2, -2px 2px 1px #0066a2, 2px -2px 1px #0066a2,
+      -2px -2px 1px #0066a2, 0px 2px 1px #0066a2, 0px -2px 1px #0066a2,
+      0px 4px 1px #004a87, 2px 4px 1px #004a87, -2px 4px 1px #004a87;
+    border: none;
+    margin: 15px 15px 30px;
+    background: repeating-linear-gradient(
+      45deg,
+      rgb(203, 218, 119),
+      rgb(203, 218, 119) 5px,
+      #e4e127 5px,
+      #e4e127 10px
+    );
+    border-bottom: 3px solid rgba(16, 91, 146, 0.5);
+    border-top: 3px solid rgba(255, 255, 255, 0.3);
+    color: #fff !important;
+    border-radius: 8px;
+    padding: 7px 14px 9px;
+    box-shadow: 0 6px 0 #266b91, 0 8px 1px 1px rgba(0, 0, 0, 0.3),
+      0 10px 0 5px #12517d, 0 12px 0 5px #1a6b9a, 0 15px 0 5px #0c405e,
+      0 15px 1px 6px rgba(0, 0, 0, 0.3);
+  }
+  .btn-ud:hover {
+    top: 2px;
+    box-shadow: 0 4px 0 #266b91, 0 6px 1px 1px rgba(0, 0, 0, 0.3),
+      0 8px 0 5px #12517d, 0 10px 0 5px #1a6b9a, 0 13px 0 5px #0c405e,
+      0 13px 1px 6px rgba(0, 0, 0, 0.3);
+  }
+  .btn-lr {
+    width: 70px;
+    height: 50px;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    text-decoration: none !important;
+    outline: none !important;
+    font-family: "Carter One", sans-serif;
+    font-size: 10px;
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 1px #0066a2, -2px 2px 1px #0066a2, 2px -2px 1px #0066a2,
+      -2px -2px 1px #0066a2, 0px 2px 1px #0066a2, 0px -2px 1px #0066a2,
+      0px 4px 1px #004a87, 2px 4px 1px #004a87, -2px 4px 1px #004a87;
+    border: none;
+    margin: 15px 15px 30px;
+    background: repeating-linear-gradient(
+      45deg,
+      #3ebbf7,
+      #3ebbf7 5px,
+      #45b1f4 5px,
+      #45b1f4 10px
+    );
+    border-bottom: 3px solid rgba(16, 91, 146, 0.5);
+    border-top: 3px solid rgba(255, 255, 255, 0.3);
+    color: #fff !important;
+    border-radius: 8px;
+    padding: 8px 15px 10px;
+    box-shadow: 0 6px 0 #266b91, 0 8px 1px 1px rgba(0, 0, 0, 0.3),
+      0 10px 0 5px #12517d, 0 12px 0 5px #1a6b9a, 0 15px 0 5px #0c405e,
+      0 15px 1px 6px rgba(0, 0, 0, 0.3);
+  }
+  .btn-lr:hover {
+    top: 2px;
+    box-shadow: 0 4px 0 #266b91, 0 6px 1px 1px rgba(0, 0, 0, 0.3),
+      0 8px 0 5px #12517d, 0 10px 0 5px #1a6b9a, 0 13px 0 5px #0c405e,
+      0 13px 1px 6px rgba(0, 0, 0, 0.3);
+  }
+  .btn-lr::before {
+    content: "";
+    height: 10%;
+    position: absolute;
+    width: 40%;
+    background: #fff;
+    right: 13%;
+    top: -3%;
+    border-radius: 99px;
+  }
+  .btn-lr::after {
+    content: "";
+    height: 10%;
+    position: absolute;
+    width: 5%;
+    background: #fff;
+    right: 5%;
+    top: -3%;
+    border-radius: 99px;
+  }
+}
